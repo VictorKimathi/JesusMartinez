@@ -95,12 +95,12 @@ export default function HomePage() {
               <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Services
               </Link>
-              <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Blog
-              </Link>
-              <Link href="/contact">
-                <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Hire Me</Button>
-              </Link>
+              </Link> */}
+              <a href="resume.docx">
+                <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Download Resume</Button>
+              </a>
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/resume.docx">
                   <Button
                     size="lg"
                     variant="outline"
@@ -146,7 +146,7 @@ export default function HomePage() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=500"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PIqzX1p7ueIQSi5p29gEtEf165sYb_DhWw&s?height=600&width=500"
                 alt="Jesus Martinez - Food Writer"
                 width={500}
                 height={600}
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Work */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#2C3E50] mb-4 font-serif">Featured Work</h2>
@@ -248,7 +248,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Professional Summary */}
       <section className="bg-[#F8FBF8] py-20 px-4 sm:px-6 lg:px-8">

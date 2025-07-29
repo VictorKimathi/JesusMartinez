@@ -149,6 +149,7 @@ const publications = [
   "Modern Flavor Media",
 ]
 
+
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedPublication, setSelectedPublication] = useState("All Publications")
@@ -209,7 +210,7 @@ export default function PortfolioPage() {
           </p>
 
           {/* Portfolio Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-[#E67E22] mb-2">2,000+</div>
               <div className="text-[#2C3E50] font-medium">Articles Published</div>
@@ -226,12 +227,12 @@ export default function PortfolioPage() {
               <div className="text-3xl font-bold text-[#E67E22] mb-2">6</div>
               <div className="text-[#2C3E50] font-medium">Years Experience</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Featured Work */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#2C3E50] mb-4 font-serif">Featured Articles</h2>
@@ -282,10 +283,10 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Search and Filter */}
-      <section className="bg-[#F8FBF8] py-12 px-4 sm:px-6 lg:px-8">
+      {/* <section className="bg-[#F8FBF8] py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
             <div className="relative flex-grow max-w-md">
@@ -336,7 +337,7 @@ export default function PortfolioPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* All Articles Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -404,7 +405,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Publications Section */}
-      <section className="bg-[#F8FBF8] py-16 px-4 sm:px-6 lg:px-8">
+      {/* <section className="bg-[#F8FBF8] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#2C3E50] mb-8 font-serif">Featured Publications</h2>
           <p className="text-lg text-[#2C3E50] mb-12">Trusted by leading food and lifestyle publications</p>
@@ -428,10 +429,10 @@ export default function PortfolioPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="bg-[#E67E22] py-16 px-4 sm:px-6 lg:px-8">
+      {/* <section className="bg-[#E67E22] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6 font-serif">Ready for Your Next Food Story?</h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -455,7 +456,7 @@ export default function PortfolioPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-[#2C3E50] text-white py-12 px-4 sm:px-6 lg:px-8">

@@ -118,7 +118,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=500"
+                src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
                 alt="Jesus Martinez in kitchen"
                 width={500}
                 height={600}
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaCALL7n_gDsa9ehc2A2YS3Pr4uid7Ga-aFw&s"
                 alt="Texas food culture"
                 width={600}
                 height={500}
