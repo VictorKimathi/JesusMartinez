@@ -169,12 +169,16 @@ export default function ServicesPage() {
               <Link href="/services" className="text-[#D35400] font-semibold">
                 Services
               </Link>
-              <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Blog
-              </Link>
+              </Link> */}
+
+        <a href="resume.docx"  download className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
               <Link href="/contact">
                 <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Hire Me</Button>
               </Link>
+</a>
+              
             </div>
           </div>
         </div>

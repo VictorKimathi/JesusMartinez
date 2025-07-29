@@ -82,12 +82,14 @@ export default function AboutPage() {
               <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Services
               </Link>
-              <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Blog
-              </Link>
+              </Link> */}
+        <a href="resume.docx"  download className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
               <Link href="/contact">
                 <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Hire Me</Button>
               </Link>
+</a>
             </div>
           </div>
         </div>

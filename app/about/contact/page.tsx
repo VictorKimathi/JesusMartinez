@@ -90,9 +90,9 @@ export default function ContactPage() {
               <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Services
               </Link>
-              <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Blog
-              </Link>
+              </Link> */}
               <Link href="/contact" className="text-[#D35400] font-semibold">
                 Contact
               </Link>
