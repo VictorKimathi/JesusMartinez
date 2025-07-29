@@ -160,6 +160,12 @@ export default function ServicesPage() {
               <span className="ml-3 text-sm text-[#D35400] font-medium">Food & Drink Writer</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+            <Link
+            href="/"
+            className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+          >
+            Home
+          </Link>
               <Link href="/about" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 About
               </Link>
@@ -169,9 +175,9 @@ export default function ServicesPage() {
               <Link href="/services" className="text-[#D35400] font-semibold">
                 Services
               </Link>
-              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-                Blog
-              </Link> */}
+              <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+                Contact
+              </Link>
 
         <a href="resume.docx"  download className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
               <Link href="/contact">

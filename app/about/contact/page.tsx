@@ -81,6 +81,12 @@ export default function ContactPage() {
               <span className="ml-3 text-sm text-[#D35400] font-medium">Food & Drink Writer</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+            <Link
+            href="/"
+            className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+          >
+            Home
+          </Link>
               <Link href="/about" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 About
               </Link>
@@ -90,9 +96,9 @@ export default function ContactPage() {
               <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
                 Services
               </Link>
-              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-                Blog
-              </Link> */}
+              <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+                Contact
+              </Link>
               <Link href="/contact" className="text-[#D35400] font-semibold">
                 Contact
               </Link>

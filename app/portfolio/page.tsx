@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { ExternalLink, Search, Filter, Clock, Eye } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { ExternalLink, Search, Filter, Clock, Eye } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const portfolioItems = [
   {
@@ -16,7 +16,8 @@ const portfolioItems = [
     date: "March 2024",
     excerpt:
       "Exploring the chemistry of starch, salt, and temperature in creating restaurant-quality pasta at home through scientific analysis and kitchen testing.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoIXGVdTQCc6ONCeu5zOfqZPIIcvfJOA35Q&s?height=300&width=400",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoIXGVdTQCc6ONCeu5zOfqZPIIcvfJOA35Q&s?height=300&width=400",
     category: "Ingredient Science",
     readTime: "8 min read",
     wordCount: "2,200",
@@ -29,7 +30,8 @@ const portfolioItems = [
     date: "February 2024",
     excerpt:
       "From H-E-B to Wegmans, regional grocers are driving local food trends and changing how Americans shop, eat, and discover new flavors.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeoO0VdmQcYoZbQEuQM15NcWpTUMFlykyiQ&s?height=300&width=400",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeoO0VdmQcYoZbQEuQM15NcWpTUMFlykyiQ&s?height=300&width=400",
     category: "Food Culture",
     readTime: "12 min read",
     wordCount: "3,100",
@@ -42,15 +44,15 @@ const portfolioItems = [
     date: "January 2024",
     excerpt:
       "How mixology trends from major cities are finding new life in unexpected places across the heartland, transforming local drinking culture.",
-    image: "https://drinkohza.com/cdn/shop/articles/AdobeStock_253046012_1_feec800e-e9a7-4810-9b46-b8f49b4a14e4.jpg?v=1640798753?height=300&width=400",
+    image:
+      "https://drinkohza.com/cdn/shop/articles/AdobeStock_253046012_1_feec800e-e9a7-4810-9b46-b8f49b4a14e4.jpg?v=1640798753?height=300&width=400",
     category: "Cocktail Culture",
     readTime: "10 min read",
     wordCount: "2,800",
     link: "#",
     featured: true,
   },
-  
-]
+];
 
 const categories = [
   "All",
@@ -62,7 +64,7 @@ const categories = [
   "Food Trends",
   "Grocery Reviews",
   "Cooking Tips",
-]
+];
 
 const publications = [
   "All Publications",
@@ -70,25 +72,28 @@ const publications = [
   "Tasting Table",
   "Eat This, Not That!",
   "Modern Flavor Media",
-]
-
+];
 
 export default function PortfolioPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [selectedPublication, setSelectedPublication] = useState("All Publications")
-  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedPublication, setSelectedPublication] =
+    useState("All Publications");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const filteredItems = portfolioItems.filter((item) => {
-    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory
-    const matchesPublication = selectedPublication === "All Publications" || item.publication === selectedPublication
+    const matchesCategory =
+      selectedCategory === "All" || item.category === selectedCategory;
+    const matchesPublication =
+      selectedPublication === "All Publications" ||
+      item.publication === selectedPublication;
     const matchesSearch =
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
 
-    return matchesCategory && matchesPublication && matchesSearch
-  })
+    return matchesCategory && matchesPublication && matchesSearch;
+  });
 
-  const featuredItems = portfolioItems.filter((item) => item.featured)
+  const featuredItems = portfolioItems.filter((item) => item.featured);
 
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
@@ -97,29 +102,52 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-[#2C3E50] font-serif">
+              <Link
+                href="/"
+                className="text-2xl font-bold text-[#2C3E50] font-serif"
+              >
                 Jesus Martinez
               </Link>
-              <span className="ml-3 text-sm text-[#D35400] font-medium">Food & Drink Writer</span>
+              <span className="ml-3 text-sm text-[#D35400] font-medium">
+                Food & Drink Writer
+              </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+            <Link
+            href="/"
+            className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+          >
+            Home
+          </Link>
+              <Link
+                href="/about"
+                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+              >
                 About
               </Link>
               <Link href="/portfolio" className="text-[#D35400] font-semibold">
                 Portfolio
               </Link>
-              <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+              <Link
+                href="/services"
+                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+              >
                 Services
               </Link>
-              {/* <Link href="/blog" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-                Blog
-              </Link> */}
-        <a href="resume.docx"  download className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-              <Link href="/contact">
-                <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Hire Me</Button>
+              <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
+                COntact
               </Link>
-</a>
+              <a
+                href="resume.docx"
+                download
+                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
+              >
+                <Link href="/contact">
+                  <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">
+                    Hire Me
+                  </Button>
+                </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -128,10 +156,13 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#F8FBF8] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-[#2C3E50] mb-6 font-serif">Published Work</h1>
+          <h1 className="text-5xl font-bold text-[#2C3E50] mb-6 font-serif">
+            Published Work
+          </h1>
           <p className="text-xl text-[#2C3E50] mb-8 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive collection of food journalism, ingredient deep-dives, and cultural analysis published across
-            leading food and lifestyle publications.
+            A comprehensive collection of food journalism, ingredient
+            deep-dives, and cultural analysis published across leading food and
+            lifestyle publications.
           </p>
 
           {/* Portfolio Stats */}
@@ -274,9 +305,16 @@ export default function PortfolioPage() {
                 className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg"
               >
                 <div className="relative h-48">
-                  <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-[#27AE60] text-white text-xs">{item.category}</Badge>
+                    <Badge className="bg-[#27AE60] text-white text-xs">
+                      {item.category}
+                    </Badge>
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -285,8 +323,12 @@ export default function PortfolioPage() {
                     <span>•</span>
                     <span>{item.date}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#2C3E50] mb-3 font-serif leading-tight">{item.title}</h3>
-                  <p className="text-[#2C3E50] mb-4 text-sm leading-relaxed">{item.excerpt}</p>
+                  <h3 className="text-lg font-bold text-[#2C3E50] mb-3 font-serif leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#2C3E50] mb-4 text-sm leading-relaxed">
+                    {item.excerpt}
+                  </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-xs text-[#2C3E50]/70">
                       <div className="flex items-center gap-1">
@@ -313,12 +355,14 @@ export default function PortfolioPage() {
 
           {filteredItems.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-xl text-[#2C3E50] mb-4">No articles found matching your criteria.</p>
+              <p className="text-xl text-[#2C3E50] mb-4">
+                No articles found matching your criteria.
+              </p>
               <Button
                 onClick={() => {
-                  setSelectedCategory("All")
-                  setSelectedPublication("All Publications")
-                  setSearchTerm("")
+                  setSelectedCategory("All");
+                  setSelectedPublication("All Publications");
+                  setSearchTerm("");
                 }}
                 className="bg-[#E67E22] hover:bg-[#D35400] text-white"
               >
@@ -388,26 +432,41 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 font-serif">Jesus Martinez</h3>
+              <h3 className="text-2xl font-bold mb-4 font-serif">
+                Jesus Martinez
+              </h3>
               <p className="text-white/80 mb-4 leading-relaxed">
-                Food & drink feature writer specializing in American culinary culture, ingredient science, and
-                restaurant trends. Based in Cedar Creek, Texas.
+                Food & drink feature writer specializing in American culinary
+                culture, ingredient science, and restaurant trends. Based in
+                Cedar Creek, Texas.
               </p>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <Link href="/about" className="block text-white/80 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="block text-white/80 hover:text-white transition-colors"
+                >
                   About
                 </Link>
-                <Link href="/portfolio" className="block text-white/80 hover:text-white transition-colors">
+                <Link
+                  href="/portfolio"
+                  className="block text-white/80 hover:text-white transition-colors"
+                >
                   Portfolio
                 </Link>
-                <Link href="/services" className="block text-white/80 hover:text-white transition-colors">
+                <Link
+                  href="/services"
+                  className="block text-white/80 hover:text-white transition-colors"
+                >
                   Services
                 </Link>
-                <Link href="/resume" className="block text-white/80 hover:text-white transition-colors">
+                <Link
+                  href="/resume"
+                  className="block text-white/80 hover:text-white transition-colors"
+                >
                   Resume
                 </Link>
               </div>
@@ -424,10 +483,13 @@ export default function PortfolioPage() {
           </div>
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-            <p>&copy; 2024 Jesus Martinez. All rights reserved. | Professional food & drink writer</p>
+            <p>
+              &copy; 2024 Jesus Martinez. All rights reserved. | Professional
+              food & drink writer
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
