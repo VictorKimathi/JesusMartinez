@@ -16,7 +16,7 @@ const portfolioItems = [
     date: "March 2024",
     excerpt:
       "Exploring the chemistry of starch, salt, and temperature in creating restaurant-quality pasta at home through scientific analysis and kitchen testing.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoIXGVdTQCc6ONCeu5zOfqZPIIcvfJOA35Q&s?height=300&width=400",
     category: "Ingredient Science",
     readTime: "8 min read",
     wordCount: "2,200",
@@ -29,7 +29,7 @@ const portfolioItems = [
     date: "February 2024",
     excerpt:
       "From H-E-B to Wegmans, regional grocers are driving local food trends and changing how Americans shop, eat, and discover new flavors.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeoO0VdmQcYoZbQEuQM15NcWpTUMFlykyiQ&s?height=300&width=400",
     category: "Food Culture",
     readTime: "12 min read",
     wordCount: "3,100",
@@ -42,91 +42,14 @@ const portfolioItems = [
     date: "January 2024",
     excerpt:
       "How mixology trends from major cities are finding new life in unexpected places across the heartland, transforming local drinking culture.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://drinkohza.com/cdn/shop/articles/AdobeStock_253046012_1_feec800e-e9a7-4810-9b46-b8f49b4a14e4.jpg?v=1640798753?height=300&width=400",
     category: "Cocktail Culture",
     readTime: "10 min read",
     wordCount: "2,800",
     link: "#",
     featured: true,
   },
-  {
-    title: "Inside the Sourdough Revival: More Than Just Bread",
-    publication: "The Spruce Eats",
-    date: "December 2023",
-    excerpt:
-      "The cultural and scientific factors driving America's renewed obsession with fermented foods and artisanal bread making.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Food Trends",
-    readTime: "15 min read",
-    wordCount: "3,500",
-    link: "#",
-    featured: false,
-  },
-  {
-    title: "Decoding the Umami Revolution in American Restaurants",
-    publication: "Tasting Table",
-    date: "November 2023",
-    excerpt:
-      "How the fifth taste is transforming menus across America, from fine dining to fast casual, and what it means for home cooks.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Restaurant Analysis",
-    readTime: "9 min read",
-    wordCount: "2,400",
-    link: "#",
-    featured: false,
-  },
-  {
-    title: "The Secret Life of Vanilla: From Bean to Bottle",
-    publication: "The Spruce Eats",
-    date: "October 2023",
-    excerpt:
-      "Investigating the complex supply chain, flavor chemistry, and cultural significance of America's favorite flavoring agent.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Ingredient Science",
-    readTime: "11 min read",
-    wordCount: "2,900",
-    link: "#",
-    featured: false,
-  },
-  {
-    title: "Why Food Trucks Are Winning the Fast-Casual Wars",
-    publication: "Eat This, Not That!",
-    date: "September 2023",
-    excerpt:
-      "Mobile dining is reshaping American food culture, offering innovation and authenticity that traditional restaurants struggle to match.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Restaurant Analysis",
-    readTime: "7 min read",
-    wordCount: "1,800",
-    link: "#",
-    featured: false,
-  },
-  {
-    title: "The Psychology of Menu Design: How Restaurants Influence Your Order",
-    publication: "Tasting Table",
-    date: "August 2023",
-    excerpt:
-      "Behavioral economics meets culinary marketing in this deep dive into how menu layout, pricing, and descriptions shape dining decisions.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Restaurant Analysis",
-    readTime: "13 min read",
-    wordCount: "3,200",
-    link: "#",
-    featured: false,
-  },
-  {
-    title: "Fermentation Nation: America's Probiotic Food Renaissance",
-    publication: "The Spruce Eats",
-    date: "July 2023",
-    excerpt:
-      "From kimchi to kombucha, exploring how ancient preservation techniques are becoming modern health trends in American kitchens.",
-    image: "/placeholder.svg?height=300&width=400",
-    category: "Food Trends",
-    readTime: "14 min read",
-    wordCount: "3,400",
-    link: "#",
-    featured: false,
-  },
+  
 ]
 
 const categories = [
