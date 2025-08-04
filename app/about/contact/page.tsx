@@ -97,7 +97,7 @@ export default function ContactPage() {
                 Services
               </Link>
               <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-                Contact
+                Contact 
               </Link>
               <Link href="/contact" className="text-[#D35400] font-semibold">
                 Contact

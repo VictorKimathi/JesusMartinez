@@ -152,7 +152,7 @@ export default function HomePage() {
 
             <div className="relative">
               <Image
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PIqzX1p7ueIQSi5p29gEtEf165sYb_DhWw&s?height=600&width=500"
+                src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM="
                 alt="Jesus Martinez - Food Writer"
                 width={500}
                 height={600}
