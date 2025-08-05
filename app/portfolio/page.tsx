@@ -12,7 +12,6 @@ import Link from "next/link";
 const portfolioItems = [
   {
     title: "Crisis-Proof Cuisine: How Michelin-Star Kitchens Reinvent Themselves in Uncertainty",
-    publication: "The Spruce Eats",
     date: "March 2025",
     excerpt:
       "Michelin-star kitchens are built on precision, ritual, and rigor. Plates are engineered, not simply assembled, and timing is orchestrated down to the second. Every service must meet exacting standards without exception. But in a world increasingly shaped by disruption, those very strengths can quickly become liabilities.",
@@ -25,7 +24,6 @@ const portfolioItems = [
   },
   {
     title: "Viral Tiktok Snack Trends That Ended up Nationwide",
-    publication: "Tasting Table",
     date: "June 2025",
     excerpt:
       "TikTok isn’t just fueling food fads. It’s reshaping what ends up in grocery carts. A single 30-second clip can clear out shelves, overwhelm brands, and turn a homemade snack into a national product. Some of the most unlikely ideas have taken that route: a bubblegum-pink sauce that sparked confusion, ice cream wrapped in candy, and a baked pasta dish that sent feta sales soaring. What began as quirky uploads became real-world obsessions and branded products.
@@ -39,7 +37,6 @@ const portfolioItems = [
   },
   {
     title: "The Underrated Food Cities That Should Be on Your 2025 Travel List",
-    publication: "Eat This, Not That!",
     date: "May 2025",
     excerpt:
       "For years, the same cities have dominated food-travel lists: Tokyo, Paris, New York, and Barcelona. And for good reason. But in 2025, travelers are expanding their maps and chasing flavor into destinations that weren’t on past itineraries. A new wave of global food scenes is emerging, driven by younger chefs, hyperlocal ingredients, and bold regional experimentation. These aren’t just off-the-radar stops. They’re quickly becoming culinary destinations in their own right.",
