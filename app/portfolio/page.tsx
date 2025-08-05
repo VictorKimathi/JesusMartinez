@@ -11,46 +11,44 @@ import Link from "next/link";
 
 const portfolioItems = [
   {
-    title: "The Science Behind Perfect Pasta Water",
+    title: "Crisis-Proof Cuisine: How Michelin-Star Kitchens Reinvent Themselves in Uncertainty",
     publication: "The Spruce Eats",
-    date: "March 2024",
+    date: "March 2025",
     excerpt:
-      "Exploring the chemistry of starch, salt, and temperature in creating restaurant-quality pasta at home through scientific analysis and kitchen testing.",
+      "Michelin-star kitchens are built on precision, ritual, and rigor. Plates are engineered, not simply assembled, and timing is orchestrated down to the second. Every service must meet exacting standards without exception. But in a world increasingly shaped by disruption, those very strengths can quickly become liabilities.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoIXGVdTQCc6ONCeu5zOfqZPIIcvfJOA35Q&s?height=300&width=400",
-    category: "Ingredient Science",
-    readTime: "8 min read",
-    wordCount: "2,200",
-    link: "#",
-    featured: true,
+    category: "Food & Dining",
+    readTime: "7 min read",
+    wordCount: "1,477",
+    link: "Crisis_Proof_Cuisine.pdf",
   },
   {
-    title: "How Regional Grocery Chains Are Reshaping American Food Culture",
+    title: "Viral Tiktok Snack Trends That Ended up Nationwide",
     publication: "Tasting Table",
-    date: "February 2024",
+    date: "June 2025",
     excerpt:
-      "From H-E-B to Wegmans, regional grocers are driving local food trends and changing how Americans shop, eat, and discover new flavors.",
+      "TikTok isn’t just fueling food fads. It’s reshaping what ends up in grocery carts. A single 30-second clip can clear out shelves, overwhelm brands, and turn a homemade snack into a national product. Some of the most unlikely ideas have taken that route: a bubblegum-pink sauce that sparked confusion, ice cream wrapped in candy, and a baked pasta dish that sent feta sales soaring. What began as quirky uploads became real-world obsessions and branded products.
+",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeoO0VdmQcYoZbQEuQM15NcWpTUMFlykyiQ&s?height=300&width=400",
-    category: "Food Culture",
-    readTime: "12 min read",
-    wordCount: "3,100",
-    link: "#",
-    featured: true,
+    category: "Food & Dining",
+    readTime: "4 min read",
+    wordCount: "874",
+    link: "Viral_Tiktok_Snack_Trends.pdf",
   },
   {
-    title: "The Rise of Craft Cocktail Culture in Small-Town America",
+    title: "The Underrated Food Cities That Should Be on Your 2025 Travel List",
     publication: "Eat This, Not That!",
-    date: "January 2024",
+    date: "May 2025",
     excerpt:
-      "How mixology trends from major cities are finding new life in unexpected places across the heartland, transforming local drinking culture.",
+      "For years, the same cities have dominated food-travel lists: Tokyo, Paris, New York, and Barcelona. And for good reason. But in 2025, travelers are expanding their maps and chasing flavor into destinations that weren’t on past itineraries. A new wave of global food scenes is emerging, driven by younger chefs, hyperlocal ingredients, and bold regional experimentation. These aren’t just off-the-radar stops. They’re quickly becoming culinary destinations in their own right.",
     image:
       "https://drinkohza.com/cdn/shop/articles/AdobeStock_253046012_1_feec800e-e9a7-4810-9b46-b8f49b4a14e4.jpg?v=1640798753?height=300&width=400",
-    category: "Cocktail Culture",
-    readTime: "10 min read",
-    wordCount: "2,800",
-    link: "#",
-    featured: true,
+    category: "Food & Dining",
+    readTime: "5 min read",
+    wordCount: "1,060",
+    link: "The_Underrated_Food_Cities.pdf",
   },
 ];
 
