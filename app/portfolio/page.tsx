@@ -14,10 +14,11 @@ const portfolioItems = [
     title: "Crisis-Proof Cuisine: How Michelin-Star Kitchens Reinvent Themselves in Uncertainty",
     date: "March 2025",
     excerpt:
-      "Michelin-star kitchens are built on precision, ritual, and rigor. Plates are engineered, not simply assembled, and timing is orchestrated down to the second. Every service must meet exacting standards without exception. But in a world increasingly shaped by disruption, those very strengths can quickly become liabilities.",
+      "Michelin-star kitchens are built on precision, ritual, and rigor...",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcoIXGVdTQCc6ONCeu5zOfqZPIIcvfJOA35Q&s?height=300&width=400",
     category: "Food & Dining",
+    publication: "Modern Flavor Media",
     readTime: "7 min read",
     wordCount: "1,477",
     link: "Crisis_Proof_Cuisine.pdf",
@@ -26,11 +27,11 @@ const portfolioItems = [
     title: "Viral Tiktok Snack Trends That Ended up Nationwide",
     date: "June 2025",
     excerpt:
-      "TikTok isn’t just fueling food fads. It’s reshaping what ends up in grocery carts. A single 30-second clip can clear out shelves, overwhelm brands, and turn a homemade snack into a national product. Some of the most unlikely ideas have taken that route: a bubblegum-pink sauce that sparked confusion, ice cream wrapped in candy, and a baked pasta dish that sent feta sales soaring. What began as quirky uploads became real-world obsessions and branded products.
-",
+      "TikTok isn’t just fueling food fads. It’s reshaping what ends up in grocery carts...",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeoO0VdmQcYoZbQEuQM15NcWpTUMFlykyiQ&s?height=300&width=400",
     category: "Food & Dining",
+    publication: "Tasting Table",
     readTime: "4 min read",
     wordCount: "874",
     link: "Viral_Tiktok_Snack_Trends.pdf",
@@ -39,10 +40,11 @@ const portfolioItems = [
     title: "The Underrated Food Cities That Should Be on Your 2025 Travel List",
     date: "May 2025",
     excerpt:
-      "For years, the same cities have dominated food-travel lists: Tokyo, Paris, New York, and Barcelona. And for good reason. But in 2025, travelers are expanding their maps and chasing flavor into destinations that weren’t on past itineraries. A new wave of global food scenes is emerging, driven by younger chefs, hyperlocal ingredients, and bold regional experimentation. These aren’t just off-the-radar stops. They’re quickly becoming culinary destinations in their own right.",
+      "For years, the same cities have dominated food-travel lists...",
     image:
       "https://drinkohza.com/cdn/shop/articles/AdobeStock_253046012_1_feec800e-e9a7-4810-9b46-b8f49b4a14e4.jpg?v=1640798753?height=300&width=400",
     category: "Food & Dining",
+    publication: "The Spruce Eats",
     readTime: "5 min read",
     wordCount: "1,060",
     link: "The_Underrated_Food_Cities.pdf",
@@ -71,16 +73,12 @@ const publications = [
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedPublication, setSelectedPublication] =
-    useState("All Publications");
+  const [selectedPublication, setSelectedPublication] = useState("All Publications");
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredItems = portfolioItems.filter((item) => {
-    const matchesCategory =
-      selectedCategory === "All" || item.category === selectedCategory;
-    const matchesPublication =
-      selectedPublication === "All Publications" ||
-      item.publication === selectedPublication;
+    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
+    const matchesPublication = selectedPublication === "All Publications" || item.publication === selectedPublication;
     const matchesSearch =
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
@@ -88,118 +86,49 @@ export default function PortfolioPage() {
     return matchesCategory && matchesPublication && matchesSearch;
   });
 
-  const featuredItems = portfolioItems.filter((item) => item.featured);
-
   return (
     <div className="min-h-screen bg-[#FEFEFE]">
-      {/* Navigation */}
       <nav className="bg-[#F5F3F0] border-b border-[#E67E22]/10 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link
-                href="/"
-                className="text-2xl font-bold text-[#2C3E50] font-serif"
-              >
+              <Link href="/" className="text-2xl font-bold text-[#2C3E50] font-serif">
                 Jesus Martinez
               </Link>
-              <span className="ml-3 text-sm text-[#D35400] font-medium">
-                Food & Drink Writer
-              </span>
+              <span className="ml-3 text-sm text-[#D35400] font-medium">Food & Drink Writer</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-            <Link
-            href="/"
-            className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
-          >
-            Home
-          </Link>
-              <Link
-                href="/about"
-                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
-              >
-                About
-              </Link>
-              <Link href="/portfolio" className="text-[#D35400] font-semibold">
-                Portfolio
-              </Link>
-              <Link
-                href="/services"
-                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
-              >
-                Services
-              </Link>
-              <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400] transition-colors">
-                COntact
-              </Link>
-              <a
-                href="resume.docx"
-                download
-                className="text-[#2C3E50] hover:text-[#D35400] transition-colors"
-              >
-                <Link href="/contact">
-                  <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">
-                    Hire Me
-                  </Button>
-                </Link>
+              <Link href="/" className="text-[#2C3E50] hover:text-[#D35400]">Home</Link>
+              <Link href="/about" className="text-[#2C3E50] hover:text-[#D35400]">About</Link>
+              <Link href="/portfolio" className="text-[#D35400] font-semibold">Portfolio</Link>
+              <Link href="/services" className="text-[#2C3E50] hover:text-[#D35400]">Services</Link>
+              <Link href="/contact" className="text-[#2C3E50] hover:text-[#D35400]">Contact</Link>
+              <a href="resume.docx" download>
+                <Button className="bg-[#E67E22] hover:bg-[#D35400] text-white">Hire Me</Button>
               </a>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#F8FBF8] to-[#FEFEFE]">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-[#2C3E50] mb-6 font-serif">
-            Published Work
-          </h1>
+          <h1 className="text-5xl font-bold text-[#2C3E50] mb-6 font-serif">Published Work</h1>
           <p className="text-xl text-[#2C3E50] mb-8 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive collection of food journalism, ingredient
-            deep-dives, and cultural analysis published across leading food and
-            lifestyle publications.
+            A comprehensive collection of food journalism, ingredient deep-dives, and cultural analysis published across leading food and lifestyle publications.
           </p>
-
-          {/* Portfolio Stats */}
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#E67E22] mb-2">2,000+</div>
-              <div className="text-[#2C3E50] font-medium">Articles Published</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#E67E22] mb-2">2,800</div>
-              <div className="text-[#2C3E50] font-medium">Avg Word Count</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#E67E22] mb-2">15+</div>
-              <div className="text-[#2C3E50] font-medium">Publications</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#E67E22] mb-2">6</div>
-              <div className="text-[#2C3E50] font-medium">Years Experience</div>
-            </div>
-          </div> */}
         </div>
       </section>
 
-      {/* Featured Work */}
-      {/* <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#2C3E50] mb-4 font-serif">Featured Articles</h2>
-            <p className="text-lg text-[#2C3E50]">Recent highlights showcasing diverse expertise</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {featuredItems.map((item, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg"
-              >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
                 <div className="relative h-48">
                   <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-[#E67E22] text-white">Featured</Badge>
+                    <Badge className="bg-[#27AE60] text-white text-xs">{item.category}</Badge>
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -221,124 +150,7 @@ export default function PortfolioPage() {
                         <span>{item.wordCount} words</span>
                       </div>
                     </div>
-                    <Link
-                      href={item.link}
-                      className="inline-flex items-center text-[#E67E22] hover:text-[#D35400] font-semibold text-sm"
-                    >
-                      Read
-                      <ExternalLink className="ml-1 h-3 w-3" />
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Search and Filter */}
-      {/* <section className="bg-[#F8FBF8] py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
-            <div className="relative flex-grow max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#2C3E50]/50" />
-              <Input
-                placeholder="Search articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-[#E67E22]/20 focus:border-[#E67E22]"
-              />
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <Filter className="h-5 w-5 text-[#2C3E50]" />
-                <span className="text-[#2C3E50] font-medium">Filter by:</span>
-              </div>
-
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-[#E67E22]/20 rounded-md bg-white text-[#2C3E50] focus:border-[#E67E22] focus:outline-none"
-              >
-                {categories.map((category) => (
-                  <option key={category} value={category}>
-                    {category}
-                  </option>
-                ))}
-              </select>
-
-              <select
-                value={selectedPublication}
-                onChange={(e) => setSelectedPublication(e.target.value)}
-                className="px-4 py-2 border border-[#E67E22]/20 rounded-md bg-white text-[#2C3E50] focus:border-[#E67E22] focus:outline-none"
-              >
-                {publications.map((pub) => (
-                  <option key={pub} value={pub}>
-                    {pub}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          <div className="text-center mb-8">
-            <p className="text-[#2C3E50]">
-              Showing {filteredItems.length} of {portfolioItems.length} articles
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* All Articles Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-[#27AE60] text-white text-xs">
-                      {item.category}
-                    </Badge>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-3 text-sm text-[#D35400]">
-                    <span className="font-semibold">{item.publication}</span>
-                    <span>•</span>
-                    <span>{item.date}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#2C3E50] mb-3 font-serif leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#2C3E50] mb-4 text-sm leading-relaxed">
-                    {item.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-xs text-[#2C3E50]/70">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        <span>{item.readTime}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Eye className="h-3 w-3" />
-                        <span>{item.wordCount} words</span>
-                      </div>
-                    </div>
-                    <Link
-                      href={item.link}
-                      className="inline-flex items-center text-[#E67E22] hover:text-[#D35400] font-semibold text-sm"
-                    >
+                    <Link href={item.link} className="inline-flex items-center text-[#E67E22] hover:text-[#D35400] font-semibold text-sm">
                       Read
                       <ExternalLink className="ml-1 h-3 w-3" />
                     </Link>
@@ -350,9 +162,7 @@ export default function PortfolioPage() {
 
           {filteredItems.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-xl text-[#2C3E50] mb-4">
-                No articles found matching your criteria.
-              </p>
+              <p className="text-xl text-[#2C3E50] mb-4">No articles found matching your criteria.</p>
               <Button
                 onClick={() => {
                   setSelectedCategory("All");
@@ -368,105 +178,24 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Publications Section */}
-      {/* <section className="bg-[#F8FBF8] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#2C3E50] mb-8 font-serif">Featured Publications</h2>
-          <p className="text-lg text-[#2C3E50] mb-12">Trusted by leading food and lifestyle publications</p>
-
-          <div className="grid md:grid-cols-4 gap-8 items-center">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[#E67E22] mb-2">The Spruce Eats</div>
-              <p className="text-[#2C3E50] text-sm">45+ Articles</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[#E67E22] mb-2">Tasting Table</div>
-              <p className="text-[#2C3E50] text-sm">32+ Articles</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[#E67E22] mb-2">Eat This, Not That!</div>
-              <p className="text-[#2C3E50] text-sm">28+ Articles</p>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-[#E67E22] mb-2">Modern Flavor</div>
-              <p className="text-[#2C3E50] text-sm">Archive</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* CTA Section */}
-      {/* <section className="bg-[#E67E22] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6 font-serif">Ready for Your Next Food Story?</h2>
-          <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Let's create compelling content that engages your audience and showcases your brand's expertise in the food
-            industry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" className="bg-white text-[#E67E22] hover:bg-gray-100 px-8">
-                Start a Project
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#E67E22] px-8 bg-transparent"
-              >
-                View Services
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Footer */}
       <footer className="bg-[#2C3E50] text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 font-serif">
-                Jesus Martinez
-              </h3>
+              <h3 className="text-2xl font-bold mb-4 font-serif">Jesus Martinez</h3>
               <p className="text-white/80 mb-4 leading-relaxed">
-                Food & drink feature writer specializing in American culinary
-                culture, ingredient science, and restaurant trends. Based in
-                Cedar Creek, Texas.
+                Food & drink feature writer specializing in American culinary culture, ingredient science, and restaurant trends. Based in Cedar Creek, Texas.
               </p>
             </div>
-
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <Link
-                  href="/about"
-                  className="block text-white/80 hover:text-white transition-colors"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="block text-white/80 hover:text-white transition-colors"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  href="/services"
-                  className="block text-white/80 hover:text-white transition-colors"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/resume"
-                  className="block text-white/80 hover:text-white transition-colors"
-                >
-                  Resume
-                </Link>
+                <Link href="/about" className="block text-white/80 hover:text-white">About</Link>
+                <Link href="/portfolio" className="block text-white/80 hover:text-white">Portfolio</Link>
+                <Link href="/services" className="block text-white/80 hover:text-white">Services</Link>
+                <Link href="/resume" className="block text-white/80 hover:text-white">Resume</Link>
               </div>
             </div>
-
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-white/80">
@@ -476,12 +205,8 @@ export default function PortfolioPage() {
               </div>
             </div>
           </div>
-
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-            <p>
-              &copy; 2024 Jesus Martinez. All rights reserved. | Professional
-              food & drink writer
-            </p>
+            <p>&copy; 2024 Jesus Martinez. All rights reserved. | Professional food & drink writer</p>
           </div>
         </div>
       </footer>
